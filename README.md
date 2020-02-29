@@ -1,1 +1,1 @@
-“Info from dev branch”.
+My first repository fot learning Python
