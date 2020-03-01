@@ -18,10 +18,10 @@ try:
 except ValueError:
     exit("Номер карти вказаний невірно")
 
-cvv = input("Введіть термін дії карти у форматі dd/yy:\n - ")
+date = input("Введіть термін дії карти у форматі dd/yy:\n - ")
 
 try:
-    days, year = cvv.split("/")
+    days, year = date.split("/")
     days = int(days)
     year = int(year)
 except ValueError:

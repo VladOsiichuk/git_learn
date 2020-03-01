@@ -16,35 +16,31 @@ except ValueError:
     exit()
 
 
-if a < b and a < c:
+if a <= b and a <= c:
     print(a, end=", ")
-    if b < c:
-        print(b, end=", ")
-        print(c)
-    else:
-        if c < b:
-            print(c, end=", ")
-            print(b)
-            exit()
+    if b <= c:
+        print(b, c)
+        exit()
+    elif c <= b:
+        print(c, b)
+        exit()
 
-if b < a and b < c:
+if b <= a and b <= c:
     print(b, end=", ")
-    if a < c:
+    if a <= c:
         print(a, end=", ")
         print(c)
     else:
-        if c < a:
+        if c <= a:
             print(c, end=", ")
             print(a)
             exit()
 
-if c < b and c < a:
+if c <= b and c <= a:
     print(c, end=", ")
-    if b < a:
-        print(b, end=", ")
-        print(a)
-    else:
-        if a < b:
-            print(a, end=", ")
-            print(b)
-            exit()
+    if b <= a:
+        print(b, a)
+        exit()
+    elif a <= b:
+        print(a, b)
+        exit()
