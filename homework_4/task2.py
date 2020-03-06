@@ -19,4 +19,24 @@ except ValueError as e:
 
 #тіло програми
 if currency == 1 and choose_currency == 2:
-    result = round()
+    result = round((amount / 1.1), 2)
+    cur1, cur2 = "USD", "EUR"
+elif currency == 1 and choose_currency == 3:
+    result = round((amount * 24), 2)
+    cur1, cur2 = "USD", "UAH"
+elif currency == 2 and choose_currency == 1:
+    result = round((amount * 1.1), 2)
+    cur1, cur2 = "EUR", "USD"
+elif currency == 2 and choose_currency == 3:
+    result = round((amount * 27), 2)
+    cur1, cur2 = "EUR", "UAH"
+elif currency == 3 and choose_currency == 1:
+    result = round((amount / 24), 2)
+    cur1, cur2 = "UAH", "USD"
+elif currency == 3 and choose_currency == 2:
+    result = round((amount / 27), 2)
+    cur1, cur2 = "UAH", "EUR"
+else:
+    print(f"Відсутні дані для конвертування, {amount} is {amount}")
+    exit()
+print(f"\n{amount} {cur1} = {result} {cur2}")
